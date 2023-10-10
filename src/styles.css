@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+*{
+    background-image: ('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdPkLYDNRIw_U1b1y26ISWEJLkWyZ58cRG0w&usqp=CAU');
+}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
