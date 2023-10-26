@@ -22,14 +22,16 @@
 <!-- sdasdasda -->
         <!--ACCIONES-->
         <td>
+          <!--botón de editar-->
             <button id="btn-acs" type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editarProducto" (click)="mostrarEditar(col)"><mat-icon>edit</mat-icon></button>
-            <button id="btn-acs" type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#eliminarProducto"><mat-icon>delete</mat-icon></button>
+          <!--botón de mostrar-->
+            <button id="btn-acs" type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#eliminarProducto"(click)="mostrarBorrar(col)"><mat-icon>delete</mat-icon></button>
         </td>
       </tr>
     </tbody>
   </table>
   <!-- BOTÓN PARA AGREGAR  -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#agregarproducto">
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#agregarProducto">
     Agrear Producto
   </button>
   
@@ -74,6 +76,7 @@
               <option value="remeras">Remeras</option>
               <option value="pantalones">Pantalones</option>
               <option value="gorras">Gorras</option>
+              <option value="darktrap">darktrap</option>
             </select>
           </div>
 
@@ -138,6 +141,27 @@
           <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="">Cancelar</button>
         </div>
 
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--eliminar el producto-->
+<div class="modal fade" *ngIf="modalVisibleProducto" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">¿Estás seguro de eliminar el producto?</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!--MOSTRAR EL PRODUCTO QUE ELIMINAMOS-->
+        {{productosSeleccionado.nombre}}
+        <img src="{{productosSeleccionado.imagen}}" alt="{{productosSeleccionado.alt}}">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal" (click)="borrarProducto()">Eliminar</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
       </div>
     </div>
   </div>

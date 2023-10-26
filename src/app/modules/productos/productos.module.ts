@@ -7,6 +7,7 @@ import { ProductoComponent } from '../producto/pages/producto/producto.component
 import { DarktrapComponent } from './pages/darktrap/darktrap.component';
 import { HardtrapComponent } from './pages/hardtrap/hardtrap.component';
 import { MemphisrapComponent } from './pages/memphisrap/memphisrap.component';
+import { CardDarktrapComponent } from './components/card-darktrap/card-darktrap.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { MemphisrapComponent } from './pages/memphisrap/memphisrap.component';
     ProductoComponent,
     DarktrapComponent,
     HardtrapComponent,
-    MemphisrapComponent
+    MemphisrapComponent,
+    CardDarktrapComponent
   ],
   imports: [
     CommonModule,
